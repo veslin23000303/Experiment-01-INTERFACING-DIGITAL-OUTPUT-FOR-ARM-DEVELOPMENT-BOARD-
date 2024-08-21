@@ -1,93 +1,139 @@
-# Experiment-01-INTERFACING DIGITAL OUTPUT FOR ARM DEVELOPMENT BOARD 
+## EXPERIMENT--01-ALP-FOR-8086
+## Name : Swaminathan.V
+
+## Roll no : 212223110057
+
+## Date of experiment : 21.8.2024
+
+## Aim: To Write and execute ALP on fundamental arithmetic and logical operations
+## Components required: 8086 emulator
+## Theory
+Running The Emulator (emu8086) Intro 8086 Microprocessor Emulator, also known as EMU8086, is an emulator of the program 8086 microprocessor. It is developed with a built-in 8086 assembler. This application is able to run programs on both PC desktops and laptops. This tool is primarily designed to copy or emulate hardware. These include the memory of a program, CPU, RAM, input and output devices, and even the display screen. There are instructions to follow when using this emulator. It can be executed into one of the two ways: backward or forward. There are also examples of assembly source code included. With this, it allows the programming of assembly language, reverse engineering, hardware architecture, and creating miniature operating system (OS). The user interface of 8086 Microprocessor Emulator is simple and easy to manage. There are five major buttons with icons and titles included. These are “Load”, “Reload”, “Step Back”, “Single Step”, and “Run”. Above those buttons is the menu that includes “File”, “View”, “Virtual Devices”, “Virtual Drive”, and “Help”. Below the buttons is a series of choices that are usually in numbers and codes. At the leftmost part is an area called “Registers” with an indication of either “H” or “L”. The other side is divided into two, which enables users to manually reset, debug, flag, etc. What is 8086 emulator emu8086 is an emulator of Intel 8086 (AMD compatible) microprocessor with integrated 8086 assembler and tutorials for beginners. Emulator runs programs like the real microprocessor in step-by-step mode. it shows registers, memory, stack, variables and flags.
+
+## Running the Emulator :
+1.Download and install emu8086 (www.emu8086.com) It is usually installed in C:\EMU8086 subfolder in the “Windows” directory
+
+2.Run emu8086 icon (on the desktop or in the c:\EMU8086 folder of window) It has green color
+
+ 3.write the code for the appropriate program for ADDITION,SUBTRACTION, MULTIPLICATION,  DIVISION operations 
  
+4.Compile the program and check for the errors
 
-## Aim: To Interface a Digital output (LED) to ARM development board and write a blink code 
-## Components required: STM32 CUBE IDE, NUCLEO ARM DEVELOPMENT BOARD  
-## Theory 
-The full form of an ARM is an advanced reduced instruction set computer (RISC) machine, and it is a 32-bit processor architecture expanded by ARM holdings. The applications of an ARM processor include several microcontrollers as well as processors. The architecture of an ARM processor was licensed by many corporations for designing ARM processor-based SoC products and CPUs. This allows the corporations to manufacture their products using ARM architecture. Likewise, all main semiconductor companies will make ARM-based SOCs such as Samsung, Atmel, TI etc.
+5.Run (once there is no syntax error)
 
-What is an ARM7 Processor?
-ARM7 processor is commonly used in embedded system applications. Also, it is a balance among classic as well as new-Cortex sequence. This processor is tremendous in finding the resources existing on the internet with excellence documentation offered by NXP Semiconductors. It suits completely for an apprentice to obtain in detail hardware & software design implementation.
-LPC2148 Microcontroller
- The LPC2148 microcontroller is designed by Philips (NXP Semiconductor) with several in-built features & peripherals. Due to these reasons, it will make more reliable as well as the efficient option for an application developer. LPC2148 is a 16-bit or 32-bit microcontroller based on ARM7 family.
-Features of LPC2148
-The main features of LPC2148 include the following.
-•	The LPC2148 is a 16 bit or 32 bit ARM7 family based microcontroller and available in a small LQFP64 package.
-•	ISP (in system programming) or IAP (in application programming) using on-chip boot loader software.
-•	On-chip static RAM is 8 kB-40 kB, on-chip flash memory is 32 kB-512 kB, the wide interface is 128 bit, or accelerator allows 60 MHz high-speed operation.
-•	It takes 400 milliseconds time for erasing the data in full chip and 1 millisecond time for 256 bytes of programming.
-•	Embedded Trace interfaces and Embedded ICE RT offers real-time debugging with high-speed tracing of instruction execution and on-chip Real Monitor software.
-•	It has 2 kB of endpoint RAM and USB 2.0 full speed device controller. Furthermore, this microcontroller offers 8kB on-chip RAM nearby to USB with DMA.
-•	One or two 10-bit ADCs offer 6 or 14 analogs i/ps with low conversion time as 2.44 μs/ channel.
-•	Only 10 bit DAC offers changeable analog o/p.
-•	External event counter/32 bit timers-2, PWM unit, & watchdog.
-•	Low power RTC (real time clock) & 32 kHz clock input.
-•	Several serial interfaces like two 16C550 UARTs, two I2C-buses with 400 kbit/s speed.
-•	5 volts tolerant quick general purpose Input/output pins in a small LQFP64 package.
-•	Outside interrupt pins-21.
-•	60 MHz of utmost CPU CLK-clock obtainable from the programmable-on-chip phase locked loop by resolving time is 100 μs.
-•	The incorporated oscillator on the chip will work by an exterior crystal that ranges from 1 MHz-25 MHz
-•	The modes for power-conserving mainly comprise idle & power down.
-•	For extra power optimization, there are individual enable or disable of peripheral functions and peripheral CLK scaling.
- 
- 
+6.Click OK to see/view the output of your program on the Emulator screen.
 
-## Procedure:
- 1. click on STM 32 CUBE IDE, the following screen will appear 
- ![image](https://user-images.githubusercontent.com/36288975/226189166-ac10578c-c059-40e7-8b80-9f84f64bf088.png)
+7.After running the program, another menu screen will be displayed, where you have the option to “View” symbol table,
 
- 2. click on FILE, click on new stm 32 project 
- ![image](https://user-images.githubusercontent.com/36288975/226189215-2d13ebfb-507f-44fc-b772-02232e97c0e3.png)
-![image](https://user-images.githubusercontent.com/36288975/226189230-bf2d90dd-9695-4aaf-b2a6-6d66454e81fc.png)
-3. select the target to be programmed  as shown below and click on next 
-
-![image](https://user-images.githubusercontent.com/36288975/226189280-ed5dcf1d-dd8d-43ae-815d-491085f4863b.png)
-
-4.select the program name 
-![image](https://user-images.githubusercontent.com/36288975/226189316-09832a30-4d1a-4d4f-b8ad-2dc28f137711.png)
-
-
-5. corresponding ioc file will be generated automatically 
-![image](https://user-images.githubusercontent.com/36288975/226189378-3abbdee2-0df6-470f-a3cd-79c74e3d3ad8.png)
-
-6.select the appropriate pins as gipo, in or out, USART or required options and configure 
-![image](https://user-images.githubusercontent.com/36288975/226189403-f7179f1a-3eae-4637-826b-ab4ec35ba1e1.png)
-![image](https://user-images.githubusercontent.com/36288975/226189425-2b2414ce-49b3-4b61-a260-c658cb2e4152.png)
-
-
-7.click on cntrl+S , automaticall C program will be generated 
-![image](https://user-images.githubusercontent.com/36288975/226189443-8b43451d-0b14-47e4-a20b-cc09c6ad8458.png)
-![image](https://user-images.githubusercontent.com/36288975/226189450-85ffa969-2ffb-4788-81e5-72d60fdda0f1.png)
-8. edit the program and as per required 
-![image](https://user-images.githubusercontent.com/36288975/226189461-a573e62f-a109-4631-a250-a20925758fe0.png)
-
-9. use project and build all 
-![image](https://user-images.githubusercontent.com/36288975/226189554-3f7101ac-3f41-48fc-abc7-480bd6218dec.png)
-10. once the project is bulild link the hexfile build in stm32cube ide using post processor build 
-![image](https://user-images.githubusercontent.com/36288975/226189577-c61cc1eb-3990-4968-8aa6-aefffc766b70.png)
-
-11. click on debug option 
-![image](https://user-images.githubusercontent.com/36288975/226189625-37daa9a3-62e9-42b5-a5ce-2ac63345905b.png)
-
-
-12. connect the stm nucleo board and click on run 
-![image](https://user-images.githubusercontent.com/36288975/226189649-b5dff389-91df-4eca-b84a-1127c6562637.png)
+8.
+![189273263-d65baae9-4b8f-4723-afb3-c0ffa4052b04](https://github.com/user-attachments/assets/bace2e68-d36b-4e6c-8e49-35c6900e9f81)
 
 
 
+9.Click on emulate to start emulation
+
+![189273273-9bb36ec1-e2e8-4892-8d35-37707332bfdc](https://github.com/user-attachments/assets/ad7d228a-0e3a-4039-890c-cfbc629990cf)
 
 
+10.If no errors are found click on run the program and check the status of various flags in the flags tab as shown below
 
-## STM 32 CUBE PROGRAM :
+![189273277-113a2a33-4a40-4ff8-95a5-ecd3a1f504fe](https://github.com/user-attachments/assets/7c16fb74-8cfa-4593-aa85-c5330e3fab71)
 
 
+## Programs for arithmetic operations
+## Addition of 8 bit ALP
+```
+org 100h
+MOV al,11h;
+MOV bl,20h;
+ADD al,bl;
+MOV [6379h],al;
+ret
+```
+## Output:
+![359149943-115a2ddb-c4f1-4479-a940-fc1784f5deb2](https://github.com/user-attachments/assets/00784ea7-8c10-4300-b63a-5d835f5ceb29)
 
-## Output  :
- 
- 
- 
- 
-## Result :
-Interfacing a digital output with ARM microcontroller is executed and the results are verified.
 
+## Subtraction of 8 bit numbers ALP:
+```
+org 100h
+MOV al,20h;
+MOV bl,[8778h];
+SUB bl,al;
+MOV [8798h],bl;
+ret
+```
+## output:
+![Screenshot 2024-08-21 142725](https://github.com/user-attachments/assets/de1c079d-1052-41da-a9a0-cc0407535542)
+
+## Multiplication alp:
+```
+org 100h
+ MOV al,13h;
+ MOV bl,2h;
+ MUL bl;
+ MOV [6063h],bl;
+ ret
+```
+## Output:
+![Screenshot 2024-08-21 143059](https://github.com/user-attachments/assets/bafebcc4-180b-44ec-b20d-c9e46206398d)
+
+## Division alp:
+
+```
+org 100h
+ MOV al,26h;
+ MOV bl,[2369h];
+ DIV bl;
+ MOV [2399h],al;
+ ret
+```
+## output:
+![Screenshot 2024-08-21 224750](https://github.com/user-attachments/assets/1db56b2b-00b7-4217-a998-a1e292ecf6fb)
+
+## Programs For Logical Operators:
+## AND
+```
+org 100h
+mov bx,1000h;
+and bx,1111h;
+mov [0040h+02],bx;
+ret
+```
+## output:
+![Screenshot 2024-08-21 222956](https://github.com/user-attachments/assets/c2b51b12-462b-4109-9286-0216c92aa912)
+
+## or:
+```
+MOV SI,0532H;
+MOV AX,0A32H;
+MOV BX,0B13H;
+OR AX,BX;
+```
+## output:
+
+![Screenshot 2024-08-21 223433](https://github.com/user-attachments/assets/af11a859-2d0c-405a-9735-07198e672b81)
+
+## NOT:
+```
+org 100h
+mov bx,0040h;
+mov ax,[bx]; 
+not al;
+mov [0040h+04],ax;
+ret
+```
+## output:
+![359154412-80e5a7d3-89b9-4756-ae19-8ab5fa6844f6](https://github.com/user-attachments/assets/931ee947-a992-4560-af16-7388ce237934)
+
+## XOR:
+```
+MOV [SI+2],AX;
+MOV AX,0A32H;
+MOV BX,0B13H;
+XOR AX,BX;
+```
+## output:
+![359155181-f90ba85a-5455-4f20-b4bc-2ad80fcbd183](https://github.com/user-attachments/assets/847d7c1d-694a-4014-8c52-91594143c0b3)
+## Result:Thus, to write and execute ALP on fundamental arithmetic operations and Logical operations is successful.
 
